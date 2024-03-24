@@ -1,0 +1,29 @@
+-- Create a ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Name = "AutoWinGUI"
+gui.ResetOnSpawn = false
+gui.DisplayOrder = 10
+gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+-- Create a TextButton for the Auto Win functionality
+local button = Instance.new("TextButton")
+button.Name = "AutoWinButton"
+button.Size = UDim2.new(0.15, 0, 0.05, 0)
+button.Position = UDim2.new(0.5, -button.Size.X.Offset/2, 0.9, -button.Size.Y.Offset/2)
+button.BackgroundColor3 = Color3.fromRGB(255, 255, 0) -- Yellowish
+button.TextColor3 = Color3.new(0, 0, 0) -- Black
+button.Font = Enum.Font.SourceSansBold
+button.TextSize = 18
+button.Text = "Auto Win"
+button.Parent = gui
+
+-- Function to auto win the game
+local function AutoWin()
+    -- Replace this with your auto win logic
+    print("Auto Win activated!")
+end
+
+-- Bind the AutoWin function to the button's MouseButton1Click event
+button.MouseButton1Click:Connect(function()
+    AutoWin()
+end)
